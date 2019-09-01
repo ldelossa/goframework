@@ -5,7 +5,6 @@ import (
 )
 
 // backoff implements various backoff mechanisms //
-
 type BackOff interface {
 	// increment backoff counter
 	Increment()
