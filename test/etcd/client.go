@@ -1,6 +1,7 @@
 package etcd
 
 import (
+	"context"
 	"os"
 	"strings"
 	"testing"
@@ -29,6 +30,7 @@ func Setup(t *testing.T, addrs []string) (*etcd.Client, func()) {
 	}
 
 	tearDown := func() {
+		client.Delete(context.Background(), "", etcd.WithFromKey())
 		client.Close()
 	}
 
