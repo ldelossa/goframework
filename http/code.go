@@ -7,4 +7,5 @@ const (
 	CodeMethodNotImplemented = "method-not-implemented"
 	CodeFailedSerialization  = "failed-serialization"
 	CodeNotFound             = "resource-not-found"
+	WebsocketUpgradeFailure  = "websocket upgrade failed"
 )
