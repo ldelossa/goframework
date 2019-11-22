@@ -11,3 +11,18 @@ type Response struct {
 	// Additional must be json serializable or expect errors
 	Payload `json:"payload,omitempty"`
 }
+
+func NewResponse(code string, message string) *Response {
+	return &Response{
+		Code:    code,
+		Message: message,
+	}
+}
+
+func NewResponseWithPayload(code string, message string, payload interface{}) *Response {
+	return &Response{
+		Code:    code,
+		Message: message,
+		Payload: payload,
+	}
+}
